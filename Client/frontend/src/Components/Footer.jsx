@@ -24,7 +24,7 @@ function Footer({ title }) {
   }
 
   return (
-    <div className="w-full mt-20">
+    <div className="w-full">
 
     <div className="bg-indigo-600 py-3 flex items-center justify-center cursor-pointer" onClick={backToTop}>
         <span className="text-lg text-white">Back to Top</span>

@@ -1,15 +1,12 @@
-import React from 'react'
-import "../src/App.css"
-import { Outlet } from 'react-router'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 function App() {
-
-
   return (
-    <div className='font-ubuntu'>
-      <Outlet/>
+    <div className="font-ubuntu">
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

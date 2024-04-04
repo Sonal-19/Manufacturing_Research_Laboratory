@@ -49,16 +49,16 @@ function Contact() {
         <div className="flex flex-col items-start gap-2 bg-white lg:w-1/2 sm:w-3/4 xs:w-full px-12 py-8 rounded-md shadow-2xl mb-12">
           <h1 className="text-3xl text-indigo-900">Address</h1>
           <span className="text-lg opacity-80">
-            <i className="fa-solid fa-location-dot"></i>&nbsp;Guru Nanak Dev
-            Engineering College, Gill Park, Gill Road, Ludhiana 141006,
-            Punjab(India).
+            <i className="fa-solid fa-location-dot"></i>&nbsp;Manufacturing Research Lab,
+Mechanical and Production Engineering Department,
+Guru Nanak Dev Engineering College, Gill Park, Gill Road, Ludhiana, Punjab, India-141006
           </span>
 
           <span className="text-lg opacity-80">
-            <i className="fa-solid fa-phone"></i>&nbsp;Phone No. : 0161 5064501
+            <i className="fa-solid fa-phone"></i>&nbsp;Phone No. : 0161-5064555, +919914400353, +919914330555
           </span>
           <span className="text-lg opacity-80">
-            <i className="fa-solid fa-envelope"></i>&nbsp;Email : xyz@gmail.com
+            <i className="fa-solid fa-envelope"></i>&nbsp;Email : mrlabgndec@gmail.com
           </span>
           <span className="text-lg opacity-80">
             <i className="fa-solid fa-phone"></i>&nbsp;Testing and Consultancy:
