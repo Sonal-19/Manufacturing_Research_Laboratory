@@ -4,18 +4,19 @@ const TestingFacilities = () => {
   return (
     <>
      <div
-        className="w-full h-96 bg-indigo-200 relative flex items-center justify-center"
+        className="w-full h-80 bg-indigo-200 relative flex items-center justify-center"
         style={{
           //backgroundImage:"url(https://img.freepik.com/free-photo/factory-worker-white-lab-suit-latex-gloves-face-mask-working-with-some-modern-equipment-manufacturing-tv-set_645730-626.jpg?w=1060)",
-          backgroundImage:"url(https://img.freepik.com/free-photo/metal-worker-using-machinery-industrial-workshop-generated-by-ai_188544-19969.jpg?w=1060)",
+          //backgroundImage:"url(https://img.freepik.com/free-photo/metal-worker-using-machinery-industrial-workshop-generated-by-ai_188544-19969.jpg?w=1060)",
+          backgroundImage: "url(/test.jpg)",
 
           backgroundSize: "cover",
           backgroundPosition: "center center",
           opacity: 1.8,
         }}
       >
-        <div className="text-center mt-5">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl text-white  font-medium mb-4">
+        <div className="text-center justify-center mt-5">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl text-white font-medium mt-9">
             Services: Testing Facilities
           </h1>
         </div>
@@ -45,12 +46,14 @@ const TestingFacilities = () => {
                   DSC
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Differential Scanning Calorimetry (DISC), Analyzes thermal
-                  properties of materials for engineering applications.
+                Differential scanning calorimetry (DSC) is the most frequently used thermal analysis
+                technique. 
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/dsc"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -59,7 +62,7 @@ const TestingFacilities = () => {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src="/ftir.jpg"
-                  alt=""
+                  alt="FTIR"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -68,12 +71,14 @@ const TestingFacilities = () => {
                   FTIR
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Fourier Transmission Infra Red Spectroscopy (FTIR), Identifies
-                  molecular structures in polymers, alloys, and metals.
+                Fourier-transform infrared spectroscopy (FTIR) is a technique used to obtain
+                an infrared spectrum of absorption or emission of a solid, liquid, or gas.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/ftir"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -82,21 +87,23 @@ const TestingFacilities = () => {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src="/twinscrew.jpeg"
-                  alt=""
+                  alt="Twin Screw Extruder"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
               <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                 <h1 className="font-dmserif text-3xl font-bold text-white">
-                  Twin Screw Extruder
+                Twin Screw Extruder 
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Twin Screw Extruder (HAAKE Mini CTW Micro): Processes
-                  materials for research in engineering applications.
+                When compounding expensive or small scale materials such as nano-composites or engineered
+                polymers, you need a fast, dependable, cost efficient method to obtain tangible results.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/twin-screw-extruder"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -104,8 +111,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/.jpg"
-                  alt=""
+                  src="/mvrt.jpg"
+                  alt="micro-vector-tester"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -114,12 +121,14 @@ const TestingFacilities = () => {
                   Micro Vicker Hardness Tester
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Micro Vicker Hardness Tester: Measures material hardness on a
-                  micro scale for quality assessment.
+                It is mainly used for the micro Vickers hardness measurement of various metals and some
+                  non-metallic materials.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/micro-vector-hardness-tester"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -128,21 +137,23 @@ const TestingFacilities = () => {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src="/pinondisc.png"
-                  alt=""
+                  alt="pin-on-disc"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
               <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                 <h1 className="font-dmserif text-3xl font-bold text-white">
-                  Tribometer
+                  Tribometer (Pin on Disk)
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Tribometer (Pin on Disk): Evaluates friction and wear
-                  characteristics of materials for engineering purposes.
+                Pin on Disc Tribometer conducting test for evaluation of co efficient of friction, Frictional
+                force and wear on metals &amp; Non metals for both dry and lubricated condition under sliding contact.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/tribometer"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -163,9 +174,11 @@ const TestingFacilities = () => {
                   Single Screw Extruder: Utilized for processing various
                   materials in engineering research.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/twin-screw-extruder"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -173,9 +186,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  //src="https://img.freepik.com/free-photo/bench-drill_1127-3266.jpg?w=360&t=st=1712115708~exp=1712116308~hmac=c7f0b151a15f29a3024adfd1a122fff75e70e333f05409af0dacb7eb62fce10e"
                   src="/cryomill.jpg"
-                  alt=""
+                  alt="cryomill"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -184,12 +196,14 @@ const TestingFacilities = () => {
                   Cryo Mill
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Cryo Mill: Prepares samples for analysis by reducing them to
-                  cryogenic temperatures.
+                Cryogenic grinding is a process where thermally sensitive and elastic substances are
+                successfully processed by cooling with liquid nitrogen.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/cryo-mill"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -210,9 +224,11 @@ const TestingFacilities = () => {
                   Universal Milling Machine: Versatile equipment for shaping
                   materials in manufacturing processes.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -233,9 +249,11 @@ const TestingFacilities = () => {
                   Digital Shore Hardness Tester: Determines material hardness
                   using digital technology for accuracy.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -244,7 +262,7 @@ const TestingFacilities = () => {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src="/ultimaker3d-printer.jpeg"
-                  alt=""
+                  alt="printer"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -256,9 +274,11 @@ const TestingFacilities = () => {
                   3D Printer Ultimaker 2+: High-performance 3D printing for
                   rapid prototyping and research.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/printer"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -279,9 +299,11 @@ const TestingFacilities = () => {
                   3D Printer Prusa i3: Cost-effective 3D printing solution for
                   various engineering applications.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/printer"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -302,9 +324,11 @@ const TestingFacilities = () => {
                   3D Printer Accucraft i250: Precision 3D printing with a focus
                   on efficiency and reliability.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/printer"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -313,7 +337,7 @@ const TestingFacilities = () => {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src="/tensile.jpg"
-                  alt=""
+                  alt="tensile-tester"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -322,12 +346,14 @@ const TestingFacilities = () => {
                   Universal Tensile Tester
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Universal Tensile Tester: Measures tensile strength and
-                  elasticity of materials for engineering analysis.
+                This Universal Testing Machines is electro mechanical machine with digital display of load &amp;
+                  displacement &amp; pulley belt system for changing speeds.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-                  See More
-                </button>
+                <a
+                  href="/universal-tensil-tester"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                  Read More
+                </a>
               </div>
             </div>
 
@@ -336,7 +362,7 @@ const TestingFacilities = () => {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src="/injection-moulding-machine.webp"
-                  alt=""
+                  alt="molding-machine"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -345,12 +371,14 @@ const TestingFacilities = () => {
                   Injection Molding Machine
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Injection Molding Machine: Shapes polymers into precise
-                  components for engineering applications.
+                This machine is used to fabricate the product by melting and pressurizing the material into
+                the die. It is normally used for the injection of polymer material.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/injection-modeling-machine"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -358,8 +386,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/.jpg"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -371,9 +399,11 @@ const TestingFacilities = () => {
                   Digital Micro Hardness Tester: Measures material hardness at a
                   microscopic level with digital precision.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -382,7 +412,7 @@ const TestingFacilities = () => {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src="/vapoursmooth.png"
-                  alt=""
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -391,12 +421,14 @@ const TestingFacilities = () => {
                   Vapour Smoothening
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Vapour Smoothening: Refines surfaces of materials through
-                  controlled vapour application.
+               With little labor and a short processing cycle, the Finishing Touch™ Smoothing Station yields prototypes, tools and end-use
+                parts that have finishes that are ready for paint, plating or production.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/vapour-smoothening"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -417,9 +449,11 @@ const TestingFacilities = () => {
                   Air Jet Erosion Tester: Evaluates material erosion resistance
                   under high-velocity air jet conditions.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -440,9 +474,11 @@ const TestingFacilities = () => {
                   Metallurgical Sample Saw: Cuts metallurgical samples with
                   precision for analysis.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -461,11 +497,13 @@ const TestingFacilities = () => {
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   Abrasive Cutting Machine: Cuts materials using abrasive tools
-                  for precise shaping.
+                  for precise shaping. Study floor model cutter for sectioning metals, ceramics and mineral samples.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/abrasive-cutting-machine"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -480,15 +518,17 @@ const TestingFacilities = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
               <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                 <h1 className="font-dmserif text-3xl font-bold text-white">
-                  Polishing/Grinding Machine
+                Double Disc Polishing Machine
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Polishing/Grinding Machine: Smoothens and refines material
-                  surfaces for enhanced finish and properties.
+                Polishing M /c is used for polishing the Metallographic samples. Double Disc is driven by high torque
+                motor. The speed can be continuously varied as indicated.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/double-disc-polishing-machine"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -509,9 +549,11 @@ const TestingFacilities = () => {
                   Vacuum Oven: Applies controlled vacuum conditions for drying
                   and curing materials.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -519,8 +561,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/Sieve-Shaker.jpeg"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -532,9 +574,11 @@ const TestingFacilities = () => {
                   Sieve Shaker: Separates particles of different sizes in
                   materials for analysis or processing.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -555,9 +599,11 @@ const TestingFacilities = () => {
                   Melt Flow Tester: Measures the flow properties of molten
                   polymers for processing evaluation.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/melt-flow-tester"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -578,9 +624,11 @@ const TestingFacilities = () => {
                   Hot Air Oven: Provides controlled heat treatment for materials
                   in various applications.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -601,9 +649,11 @@ const TestingFacilities = () => {
                   Tool Maker’s Microscope: Enables detailed inspection and
                   measurement of tooling components.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -624,9 +674,11 @@ const TestingFacilities = () => {
                   FLIR Infrared Thermometer: Measures surface temperatures
                   accurately using infrared technology.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -647,9 +699,11 @@ const TestingFacilities = () => {
                   Vibratory Finishing Machine: Achieves surface finishing of
                   materials through vibratory agitation.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -670,9 +724,11 @@ const TestingFacilities = () => {
                   Metallographic Hot Mounting Press: Prepares metallurgical
                   samples for analysis through hot mounting.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -680,8 +736,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/.jpg"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -693,9 +749,11 @@ const TestingFacilities = () => {
                   3D Scanner: Captures three-dimensional data of objects for
                   analysis or reproduction.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -703,8 +761,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/.jpg"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -716,9 +774,11 @@ const TestingFacilities = () => {
                   Surface Roughness Tester: Measures surface roughness of
                   materials for quality assessment.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -726,8 +786,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/.jpg"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -739,9 +799,11 @@ const TestingFacilities = () => {
                   Inverted Metallurgical Microscope: Inspects metallurgical
                   samples with magnification from beneath.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -749,8 +811,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/.jpg"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -762,9 +824,11 @@ const TestingFacilities = () => {
                   Ultrasonic Tank: Utilizes ultrasonic waves for cleaning or
                   processing materials.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -772,8 +836,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/.webp"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -785,9 +849,11 @@ const TestingFacilities = () => {
                   Thermal Conductivity Tester: Determines the ability of
                   materials to conduct heat for engineering purposes.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -795,8 +861,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/Digital-Micrometer.webp"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -808,9 +874,11 @@ const TestingFacilities = () => {
                   Digital Micrometer: Measures dimensions with high precision
                   using digital technology.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -818,7 +886,7 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
+                  src="/Digital-Vernier-Caliper.jpg"
                   alt=""
                 />
               </div>
@@ -831,9 +899,11 @@ const TestingFacilities = () => {
                   Digital Vernier Caliper: Measures dimensions accurately with
                   digital readout for engineering applications.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -841,8 +911,8 @@ const TestingFacilities = () => {
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="/3dprinteraccucraft.jpg"
-                  alt=""
+                  src="/Pedestal-Grinder.webp"
+                  alt="img"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
@@ -854,9 +924,11 @@ const TestingFacilities = () => {
                   Pedestal Grinder: Sharpens and shapes tools and materials
                   using grinding wheels mounted on a pedestal.
                 </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                <a
+                  href="/"
+                  className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 

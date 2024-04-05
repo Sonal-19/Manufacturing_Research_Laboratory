@@ -17,6 +17,8 @@ export default function Navbar() {
     { name: "Services", href: "/testing", current: activeNavLink === "Services" },
     { name: "News & Events", href: "/news-events", current: activeNavLink === "News & Events" },
     { name: "Contact Us", href: "/contact", current: activeNavLink === "Contact Us" },
+    // { name: "DSC", href: "/dsc", current: activeNavLink === "DSC" },
+    // { name: "FTIR", href: "/ftir", current: activeNavLink === "FTIR" },
   ];
 
   const testingFacilities = [
@@ -49,8 +51,8 @@ export default function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center pl-2">
                 {/* Logo */}
-                <img className="h-12 w-auto" src="/gne_logo.png" alt="Your Company" />
-                <img className="h-12 w-auto" src="/mrl2.png" alt="Your Company" />
+                <a href="/"><img className="h-12 w-full" src="/gne_logo.png" alt="Your Company" /></a>
+                <a href="/"><img className="h-12 w-auto" src="/mrl3.png" alt="Your Company" /></a>
               </div>
               <div className="hidden sm:flex flex-grow justify-center items-center">
                 <div className="flex justify-center w-full sm:w-2/3">

@@ -33,29 +33,29 @@ function Footer({ title }) {
       <div className="links py-4 bg-indigo-700">
         <ul className="flex items-center justify-center gap-4 ">
           <li className="px-3 py-1 border-r border-white">
-            <a href="#" className="text-white text-lg hover:underline">
+            <a href="/" className="text-white text-lg hover:underline">
               Home
             </a>
           </li>
           <li className="px-3 py-1 border-r border-white">
             <a
-              href="#contact-form"
+              href="/about"
               className="text-white text-lg hover:underline"
             >
-              Contact Us
+              About Us
             </a>
           </li>
           <li className="px-3 py-1 border-r border-white">
-            <a href="" className="text-white text-lg hover:underline">
-              Facilities
+            <a href="/testing" className="text-white text-lg hover:underline">
+              Services
             </a>
           </li>
           <li className="px-3 py-1">
             <a
-              href="#about-page"
+              href="/contact"
               className="text-white text-lg hover:underline"
             >
-              About Us
+              Contact Us
             </a>
           </li>
         </ul>
