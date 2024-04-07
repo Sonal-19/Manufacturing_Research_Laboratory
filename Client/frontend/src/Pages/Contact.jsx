@@ -11,7 +11,6 @@ function Contact() {
 
   const formRef = useRef(null); // Reference to the form element
 
-  // const baseUrl = "http://localhost:9000";
   const baseUrl = "https://manufacturing-research-laboratory-gndec.vercel.app";
 
   const sendEmail = async () => {
@@ -28,9 +27,8 @@ function Contact() {
         // Show toast message for successful email submission
         toast.success("Email sent successfully!");
         
-        // Clear the form fields after successful submission
-        formRef.current.reset(); // Reset the form fields
-        setFormData({ // Clear the form state
+        formRef.current.reset(); 
+        setFormData({ 
           name: "",
           email: "",
           subject: "",
