@@ -50,6 +50,11 @@ function Footer({ title }) {
               Services
             </a>
           </li>
+          <li className="px-3 py-1 border-r border-white">
+            <a href="/news-events" className="text-white text-lg hover:underline">
+              News & Events
+            </a>
+          </li>
           <li className="px-3 py-1">
             <a
               href="/contact"

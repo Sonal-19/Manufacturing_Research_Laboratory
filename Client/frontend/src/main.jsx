@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { Provider } from "react-redux";
-import { store } from "../src/Redux/store.js";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx"; 
@@ -25,10 +23,12 @@ import Tribometer from "./Components/Testings/Tribometer.jsx";
 import TwinScrewExtruder from "./Components/Testings/TwinScrewExtruder.jsx";
 import UniversalTensilTester from "./Components/Testings/UniversalTensilTester.jsx";
 import VapourSmoothening from "./Components/Testings/VapourSmoothening.jsx";
+import QueryForm from "./Pages/QueryForm.jsx";
+import Form from "./Pages/Form.jsx";
+import MyForm from "./Pages/MyForm.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Provider store={store}>
       <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -52,10 +52,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/twin-screw-extruder" element={<TwinScrewExtruder/>} />
           <Route path="/universal-tensil-tester" element={<UniversalTensilTester/>} />
           <Route path="/vapour-smoothening" element={<VapourSmoothening/>} />
+          <Route path="/queryform" element={<QueryForm/>} />
+          <Route path="/form" element={<Form/>} />
+          <Route path="/myform" element={<MyForm/>} />
+          
         </Route>
       </Routes>
       </BrowserRouter>
       <Footer/>
-    </Provider>
   </React.StrictMode>
 );

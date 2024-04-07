@@ -1,23 +1,25 @@
 const express = require("express");
+const dotenv = require("dotenv");
+const emailRoutes = require("./Routes/emailRoutes");
+
 const app = express();
+dotenv.config();
+
 const cors = require("cors");
-require("dotenv").config();
-const port = process.env.PORT;
-const router = require("./Routes/index");
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 
-app.use(express.json());
-app.use(
-  cors({
-    credentials: true,
-    methods: ["GET", "POST"],
-    origin: " http://localhost:5173",
-  })
-);
+app.use(cors()); // Use this after the variable declaration
 
-app.use("/api", router);
+app.use(express.json()); // tell the server to accept the json data from frontend
 
-app.listen(port, () => {
-  console.log(
-    `Manufactuing Research Laboratory Server is running at port ${port}`
-  );
+app.use("/email", emailRoutes);
+
+
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+  console.log(`Manufactuing Research Laboratory Server is running at port ${PORT}`);
 });

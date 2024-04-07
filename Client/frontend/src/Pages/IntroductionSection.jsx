@@ -1,57 +1,119 @@
-import React from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import "@splidejs/react-splide/css/skyblue";
-import "@splidejs/react-splide/css/sea-green";
-import "@splidejs/react-splide/css/core";
+import React, { useState, useEffect } from 'react';
+import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 
 function IntroductionSection() {
+  const slides = [
+    {
+      url: '/test.jpg',
+    },
+    // {
+    //   url: '/test1.jpg',
+    // },
+    {
+      url: '/lab1.jpg',
+    },
+    {
+      url: '/lab2.jpg',
+    },
+    {
+      url: '/lab6.jpg',
+    },
+    {
+      url: '/lab8.jpg',
+    },
+    {
+      url: '/lab9.jpg',
+    },
+    {
+      url: '/lab10.jpg',
+    },
+    {
+      url: '/lab11.jpg',
+    },
+    {
+      url: '/lab12.jpg',
+    },
+    {
+      url: '/lab14.jpg',
+    },
+    
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  // const goToSlide = (slideIndex) => {
+  //   setCurrentIndex(slideIndex);
+  // };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // Change slide every 3 seconds
+    return () => clearInterval(interval);
+  }, [currentIndex]); // Run effect when currentIndex changes
+
   return (
     <>
-      <div
-        className="w-full h-screen bg-indigo-200 relative flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "url(https://img.freepik.com/free-photo/precision-machinery-shapes-golden-substance-with-robotic-exactitude_91128-4554.jpg?w=1380&t=st=1712097170~exp=1712097770~hmac=2e1efcdcee055e083a04ef2d4fdd9bad2cf02ecdc12f28cd052545cdd83b5895)",
-          //backgroundImage:"url(/wall2.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          opacity: 1.8,
-        }}
-      >
-        <div className="text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl text-white  font-medium mb-4">
-            Welcome to our
-          </h1>
-          <h1 className="text-4xl md:text-6xl lg:text-8xl text-center text-white font-medium mb-8">
-            Manufacturing Research Lab
-          </h1>
-          <a
-            className="text-white font-medium border-2 border-white bg-none hover:bg-white
-          hover:text-indigo-900 rounded-md px-6 py-2 text-xl md:text-2xl lg:text-3xl transition-all"
-            href="#about-page"
-          >
-            Explore Now
-          </a>
+      <div className='w-full h-screen m-auto relative group'>
+        <div
+          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+          className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+        > 
+          {/* Welcome Message */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl mt-5 mb-4 font-medium">
+              Welcome to our
+            </h1>
+            <h1 className="text-4xl md:text-6xl lg:text-8xl mb-8 font-medium">
+              Manufacturing Research Lab
+            </h1>
+            <a
+              className="text-white mt-2 font-medium border-2 border-white bg-none hover:bg-white hover:text-indigo-900 rounded-md px-6 py-2 text-xl md:text-2xl lg:text-3xl transition-all"
+              href="#about-page"
+            >
+              Explore Now
+            </a>
+          </div>
         </div>
+        {/* Left Arrow */}
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+          <IoChevronBack onClick={prevSlide} size={30} />
+        </div>
+
+        {/* Right Arrow */}
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+          <IoChevronForward onClick={nextSlide} size={30} />
+        </div>
+        {/* <div className='flex top-4 justify-center py-2'>
+          {slides.map((slide, slideIndex) => (
+            <div
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+              className='text-2xl cursor-pointer'
+            >
+            </div>
+          ))}
+        </div> */}
       </div>
 
-      {/* <div
-        className="w-full h-screen bg-indigo-200 relative flex items-center justify-center"
-        style={{
-          backgroundImage: "url(/wall2.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          opacity: 1.8,
-        }}
-      ></div> */}
-
       <div className="creativesplanet-box-content-inner">
-        <div className="flex flex-col items-center justify-center bg-neutral-800 min-h-screen py-8">
-          {" "}
-          {/* Added py-8 for equal padding top and bottom */}
+        <div className="flex flex-col items-center justify-center bg-neutral-800 h-full py-8">
+          {/* Officials Section */}
           <h2 className="text-3xl font-bold text-white mb-8">Officials</h2>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {/* Officials details */}
             <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
                 <img
@@ -134,8 +196,6 @@ function IntroductionSection() {
                 </a>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>

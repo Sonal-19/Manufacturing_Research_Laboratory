@@ -1,64 +1,73 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { handleClientMessage } from "../Redux/Action";
-import {
-  CLIENT_MESSAGE_FAILURE,
-  CLIENT_MESSAGE_SUCCESS,
-} from "../Redux/Constants";
+import React, { useState, useRef } from "react";
 import { toast, Toaster } from "sonner";
 
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    mobile: "",
+    subject: "",
     message: "",
   });
 
-  const isLoading = useSelector((state) => state.Message.isLoading);
-  const success = useSelector((state) => state.Message.success);
-  const failure = useSelector((state) => state.Message.failure);
+  const formRef = useRef(null); // Reference to the form element
 
-  const dispatch = useDispatch();
+  const baseUrl = "http://localhost:9000";
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    dispatch(handleClientMessage(formData));
+  const sendEmail = async () => {
+    try {
+      const response = await fetch(`${baseUrl}/email/sendEmail`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Show toast message for successful email submission
+        toast.success("Email sent successfully!");
+        
+        // Clear the form fields after successful submission
+        formRef.current.reset(); // Reset the form fields
+        setFormData({ // Clear the form state
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error("Failed to send email. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("An error occurred. Please try again later.");
+    }
   };
-
-  useEffect(() => {
-    if (failure) {
-      toast.error(failure);
-      dispatch({ type: CLIENT_MESSAGE_FAILURE, payload: "" });
-    }
-  }, [failure]);
-
-  useEffect(() => {
-    if (success) {
-      toast.success(success);
-      dispatch({ type: CLIENT_MESSAGE_SUCCESS, payload: "" });
-    }
-  }, [success]);
 
   return (
     <div className="w-full" id="contact-form">
-      <Toaster richColors position="bottom-center"></Toaster>
       <div className="w-full flex flex-col items-center justify-center bg-slate-200 py-12">
         <h1 className="text-5xl text-indigo-900 mb-12">Contact Us</h1>
+
+        {/* Render the Toaster component */}
+        <Toaster position="top-center"/>
 
         <div className="flex flex-col items-start gap-2 bg-white lg:w-1/2 sm:w-3/4 xs:w-full px-12 py-8 rounded-md shadow-2xl mb-12">
           <h1 className="text-3xl text-indigo-900">Address</h1>
           <span className="text-lg opacity-80">
-            <i className="fa-solid fa-location-dot"></i>&nbsp;Manufacturing Research Lab,
-Mechanical and Production Engineering Department,
-Guru Nanak Dev Engineering College, Gill Park, Gill Road, Ludhiana, Punjab, India-141006
+            <i className="fa-solid fa-location-dot"></i>&nbsp;Manufacturing
+            Research Lab, Mechanical and Production Engineering Department, Guru
+            Nanak Dev Engineering College, Gill Park, Gill Road, Ludhiana,
+            Punjab, India-141006
           </span>
 
           <span className="text-lg opacity-80">
-            <i className="fa-solid fa-phone"></i>&nbsp;Phone No. : 0161-5064555, +919914400353, +919914330555
+            <i className="fa-solid fa-phone"></i>&nbsp;Phone No. : 0161-5064555,
+            +919914400353, +919914330555
           </span>
           <span className="text-lg opacity-80">
-            <i className="fa-solid fa-envelope"></i>&nbsp;Email : mrlabgndec@gmail.com
+            <i className="fa-solid fa-envelope"></i>&nbsp;Email :
+            mrlabgndec@gmail.com
           </span>
           <span className="text-lg opacity-80">
             <i className="fa-solid fa-phone"></i>&nbsp;Testing and Consultancy:
@@ -69,40 +78,50 @@ Guru Nanak Dev Engineering College, Gill Park, Gill Road, Ludhiana, Punjab, Indi
         <div className="lg:w-1/2 sm:w-3/4 xs:w-full flex flex-col items-center gap-4 bg-white px-12 py-8 rounded-md shadow-2xl">
           <h1 className="text-3xl text-indigo-900">Leave a message</h1>
           <form
+            ref={formRef} // Set the form reference
             className="flex flex-col gap-4 w-full"
-            onSubmit={handleFormSubmit}
+            onSubmit={(e) => {
+              e.preventDefault(); // Prevent default form submission
+              sendEmail(); // Call sendEmail function on form submission
+            }}
           >
             <input
               type="text"
+              id="name"
               placeholder="Enter your Full Name"
               value={formData.name}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
               className="bg-white px-4 py-1 text-lg border border-slate-400 hover:border-slate-700 focus:outline-black "
+              required
             />
             <input
               type="text"
+              id="email"
               placeholder="Enter your Email"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
               className="bg-white px-4 py-1 text-lg border border-slate-400 hover:border-slate-700 focus:outline-black "
+              required
             />
             <input
               type="text"
-              placeholder="Enter your mobile"
+              id="subject"
+              placeholder="Enter Subject"
               className="bg-white px-4 py-1 text-lg border border-slate-400 hover:border-slate-700 focus:outline-black "
-              value={formData.mobile}
+              value={formData.subject}
               onChange={(e) =>
-                setFormData({ ...formData, mobile: e.target.value })
+                setFormData({ ...formData, subject: e.target.value })
               }
+              required
             />
 
             <textarea
               name="message"
-              id=""
+              id="message"
               cols="30"
               rows="6"
               placeholder="Leave a message"
@@ -111,11 +130,16 @@ Guru Nanak Dev Engineering College, Gill Park, Gill Road, Ludhiana, Punjab, Indi
                 setFormData({ ...formData, message: e.target.value })
               }
               className="bg-white px-4 py-1 text-lg border border-slate-400 hover:border-slate-700 focus:outline-black "
+              required
             ></textarea>
 
             <div className="mt-6 flex items-center justify-center">
-              <button className="px-8 py-2 text-xl font-semibold text-white border border-indigo-600 bg-indigo-600 rounded-md hover:bg-white hover:border  hover:border-indigo-600 hover:text-indigo-600">
-                {isLoading ? <span>Loading....</span> : <span>Send</span>}
+              <button
+                type="submit" // Set button type to submit
+                className="px-8 py-2 text-xl font-serif text-white border border-green-600 bg-green-600 rounded-md hover:bg-black hover:border hover:border-green-600 hover:text-green-600"
+
+              >
+                Submit
               </button>
             </div>
           </form>
@@ -125,10 +149,10 @@ Guru Nanak Dev Engineering College, Gill Park, Gill Road, Ludhiana, Punjab, Indi
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.7604327864055!2d75.85704311066512!3d30.86068466599051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a828f09011b15%3A0xbf3f5b51dcc81b12!2sGuru%20Nanak%20Dev%20Engineering%20College!5e0!3m2!1sen!2sin!4v1712036083726!5m2!1sen!2sin"
             className="lg:w-3/4 shadow-2xl h-96 sm:w-3/4 xs:w-full"
-            style={{border:0}}
-            allowfullscreen=""
+            style={{ border: 0 }}
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

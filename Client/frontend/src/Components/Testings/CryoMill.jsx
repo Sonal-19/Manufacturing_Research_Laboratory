@@ -25,7 +25,7 @@ export default function CryoMill() {
           <img
             src="/cryomill.jpg"
             alt="Cryo Mill"
-            className="max-w-full h-auto"
+            className="max-w-full h-screen"
           />
         </div>
 
@@ -100,10 +100,8 @@ export default function CryoMill() {
                       Field of application
                     </td>
                     <td className="border border-gray-400 px-4 py-2">
-                      agriculture, biology, chemistry / plastics, construction
-                      materials, engineering / electronics, environment /
-                      recycling, food, geology / metallurgy, glass / ceramics,
-                      medicine / pharmaceuticals
+                      agriculture, biology, chemistry/plastics, construction
+                      materials, engineering/electronics
                     </td>
                   </tr>
                   <tr>
