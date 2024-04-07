@@ -70,6 +70,7 @@ const QueryForm = () => {
   });
 
   // const baseUrl = "http://localhost:9000";
+  //Api
   const baseUrl = "https://manufacturing-research-laboratory-gndec.vercel.app";
 
   const handleChange = (e) => {

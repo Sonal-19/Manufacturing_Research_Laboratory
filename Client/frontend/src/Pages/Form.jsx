@@ -168,10 +168,6 @@ const Form = () => {
                     <input type="number" name={key} placeholder={key} value={formData.samples[key]}
                     onChange={handleSampleChange} className="border-gray-300 border-b-2 rounded-md px-1 py-1 ml-2" />
                     </span>
-                    {/* <span className='flex d-flex'> No of Samples:
-                    <input type="number" name={key} placeholder={`Number of ${key} samples`} value={formData.samples[key]}
-                    onChange={handleSampleChange} className="border-gray-300 border-b-2 rounded-md px-3 py-2 ml-2" />
-                    </span> */}
                   </div>
                 ))}
               </div>
@@ -179,10 +175,6 @@ const Form = () => {
                 <button type="button" onClick={handlePDFView} className="bg-green-500 text-white rounded-md px-4 py-2 mr-5 mb-2">View Testing Charge List (PDF)</button>
                 <button type="submit" onClick={handlePDFView} className="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
               </div>
-              {/* <div className="mb-4">
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 mb-2">Submit</button>
-                <button type="button" onClick={handlePDFView} className="bg-green-500 text-white px-4 py-2 rounded-md">View Testing Charge List (PDF)</button>
-              </div> */}
             </form>
           </div>
         </div>
