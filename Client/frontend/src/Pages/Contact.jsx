@@ -11,7 +11,8 @@ function Contact() {
 
   const formRef = useRef(null); // Reference to the form element
 
-  const baseUrl = "http://localhost:9000";
+  // const baseUrl = "http://localhost:9000";
+  const baseUrl = "https://manufacturing-research-laboratory-gndec.vercel.app";
 
   const sendEmail = async () => {
     try {

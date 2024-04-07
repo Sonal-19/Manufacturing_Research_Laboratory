@@ -69,7 +69,8 @@ const QueryForm = () => {
     },
   });
 
-  const baseUrl = "http://localhost:9000";
+  // const baseUrl = "http://localhost:9000";
+  const baseUrl = "https://manufacturing-research-laboratory-gndec.vercel.app";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
