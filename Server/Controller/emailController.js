@@ -18,9 +18,9 @@ const sendEmail = expressAsyncHandler(async (req, res) => {
 
   var mailOptions = {
     from: process.env.SMTP_MAIL,
-    to: email,
+    to: process.env.SMTP_MAIL,
     subject: subject,
-    text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    text: `Name: ${name}\n\nEmail: ${email}\n\nMessage:${message}`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

@@ -3,7 +3,6 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 function About() {
   const slides = [
-    { url: "/test.jpg" },
     { url: "/lab1.jpg" },
     { url: "/lab2.jpg" },
     { url: "/lab3.jpg" },
@@ -85,6 +84,7 @@ function About() {
             </p>
           </div>
           <div className="flex-1 flex items-center justify-center lg:order-2 lg:mt-0">
+            {/* Slider image Desktop */}
             <div className="w-full lg:max-w-[650px] m-auto py-16 px-4 relative">
               <div
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
@@ -100,6 +100,15 @@ function About() {
                 <IoChevronForward onClick={nextSlide} size={30} />
               </div>
             </div>
+
+          {/* Display Only Image in Mobile Device */}
+            <div className="flex-1 flex items-center justify-center lg:order-2 mt-4 lg:mt-0">
+            <img
+              src="/gndecPng.png"
+              alt="MRLogo"
+              className="max-w-full h-auto"
+            />
+          </div>
           </div>
         </div>
       </div>

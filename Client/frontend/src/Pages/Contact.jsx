@@ -45,33 +45,52 @@ function Contact() {
   };
 
   return (
-    <div className="w-full" id="contact-form">
-      <div className="w-full flex flex-col items-center justify-center bg-slate-200 py-12">
-        <h1 className="text-5xl text-indigo-900 mb-12">Contact Us</h1>
+    <>
 
+      <div
+        className="w-full h-80 bg-indigo-200 relative flex items-center justify-center"
+        style={{
+          backgroundImage: "url(/contact.avif)",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          opacity: 1.8,
+        }}
+      >
+        <div className="text-center mt-5">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl text-white mt-16 font-medium mb-0">
+          Contact Us
+          </h1>
+        </div>
+      </div>
+
+        <div className="w-full" id="contact-form">
+      <div className="w-full flex flex-col items-center justify-center bg-slate-200 py-12">
         {/* Render the Toaster component */}
         <Toaster position="top-center"/>
 
-        <div className="flex flex-col items-start gap-2 bg-white lg:w-1/2 sm:w-3/4 xs:w-full px-12 py-8 rounded-md shadow-2xl mb-12">
-          <h1 className="text-3xl text-indigo-900">Address</h1>
-          <span className="text-lg opacity-80">
-            <i className="fa-solid fa-location-dot"></i>&nbsp;Manufacturing
+        <div className="flex flex-col items-start text-justify font-medium gap-2 bg-white lg:w-1/2 sm:w-3/4 xs:w-full px-12 py-8 rounded-md shadow-2xl mb-12">
+          <span className="text-justify text-md opacity-80 mb-2">
+            <i className="fa-solid = fa-location-dot"> </i>&nbsp;Manufacturing
             Research Lab, Mechanical and Production Engineering Department, Guru
             Nanak Dev Engineering College, Gill Park, Gill Road, Ludhiana,
             Punjab, India-141006
           </span>
 
-          <span className="text-lg opacity-80">
-            <i className="fa-solid fa-phone"></i>&nbsp;Phone No. : 0161-5064555,
+          <span className="text-md opacity-80">
+            <i className="fa-solid fa-phone mb-2"></i>&nbsp;Phone No. : 
             +919914400353, +919914330555
           </span>
-          <span className="text-lg opacity-80">
-            <i className="fa-solid fa-envelope"></i>&nbsp;Email :
+          <span className="text-md opacity-80">
+            <i className="fa-solid fa-envelope mb-2"></i>&nbsp;Email :
+            mrlab@gndec.ac.in (official)
+          </span>
+          <span className="text-md opacity-80">
+            <i className="fa-solid fa-envelope mb-2"></i>&nbsp;Email :
             mrlabgndec@gmail.com
           </span>
-          <span className="text-lg opacity-80">
-            <i className="fa-solid fa-phone"></i>&nbsp;Testing and Consultancy:
-            0161 5064709
+          <span className="text-md opacity-80">
+            <i className="fa-solid fa-phone mb-2"></i>&nbsp;Testing and Consultancy:
+            01615064709
           </span>
         </div>
 
@@ -157,6 +176,7 @@ function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

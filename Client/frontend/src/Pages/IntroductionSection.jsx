@@ -6,17 +6,11 @@ function IntroductionSection() {
     {
       url: '/test.jpg',
     },
-    // {
-    //   url: '/test1.jpg',
-    // },
     {
       url: '/lab1.jpg',
     },
     {
       url: '/lab2.jpg',
-    },
-    {
-      url: '/lab6.jpg',
     },
     {
       url: '/lab8.jpg',
@@ -32,9 +26,6 @@ function IntroductionSection() {
     },
     {
       url: '/lab12.jpg',
-    },
-    {
-      url: '/lab14.jpg',
     },
     
   ];
@@ -81,7 +72,7 @@ function IntroductionSection() {
             </h1>
             <a
               className="text-white mt-2 font-medium border-2 border-white bg-none hover:bg-white hover:text-indigo-900 rounded-md px-6 py-2 text-xl md:text-2xl lg:text-3xl transition-all"
-              href="#about-page"
+              href="/queryform"
             >
               Explore Now
             </a>
@@ -96,16 +87,6 @@ function IntroductionSection() {
         <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
           <IoChevronForward onClick={nextSlide} size={30} />
         </div>
-        {/* <div className='flex top-4 justify-center py-2'>
-          {slides.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className='text-2xl cursor-pointer'
-            >
-            </div>
-          ))}
-        </div> */}
       </div>
 
       <div className="creativesplanet-box-content-inner">

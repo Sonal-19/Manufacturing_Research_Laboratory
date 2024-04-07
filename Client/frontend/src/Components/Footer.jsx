@@ -5,17 +5,17 @@ function Footer({ title }) {
     {
       id: 1,
       link: "facebook",
-      href: "",
+      href: "https://www.facebook.com/official.gndec/",
     },
     {
       id: 2,
       link: "instagram",
-      href: "",
+      href: "https://www.instagram.com/official.gndec/?hl=en",
     },
     {
       id: 3,
       link: "linkedin",
-      href: "",
+      href: "https://in.linkedin.com/in/tnpgndec",
     },
   ];
 
@@ -71,7 +71,7 @@ function Footer({ title }) {
           {links.map((item) => {
             return (
               <li className="px-3 py-1 " key={item.id}>
-                <a href={item.href} className="text-white">
+                <a href={item.href} target="_blank" className="text-white">
                   <i className={`fa-brands fa-${item.link} text-2xl`}></i>
                 </a>
               </li>

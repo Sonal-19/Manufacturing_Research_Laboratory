@@ -25,10 +25,6 @@ const TestingFacilities = () => {
       <div className="creativesplanet-box-content-inner">
         <div className="flex flex-col items-center justify-center bg-neutral-800 min-h-screen py-8">
           {" "}
-          {/* Added py-8 for equal padding top and bottom */}
-          {/* <h2 className="text-3xl font-bold text-white mb-8">
-            Services: Testing Facilities
-          </h2> */}
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {/* Add testing facilities grid items here */}
             <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
@@ -71,8 +67,8 @@ const TestingFacilities = () => {
                   FTIR
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Fourier-transform infrared spectroscopy (FTIR) is a technique used to obtain
-                an infrared spectrum of absorption or emission of a solid, liquid, or gas.
+                Fourier-transform infrared spectroscopy(FTIR) is a technique used to obtain
+                an infrared spectrum of absorption or emission of a solid, liquid, or gas.
                 </p>
                 <a
                   href="/ftir"
@@ -382,7 +378,7 @@ const TestingFacilities = () => {
               </div>
             </div>
 
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            {/* <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -405,7 +401,7 @@ const TestingFacilities = () => {
                   Read More
                 </a>
               </div>
-            </div>
+            </div> */}
 
             <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
@@ -732,7 +728,7 @@ const TestingFacilities = () => {
               </div>
             </div>
 
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            {/* <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -755,9 +751,9 @@ const TestingFacilities = () => {
                   Read More
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            {/* <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -780,9 +776,9 @@ const TestingFacilities = () => {
                   Read More
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            {/* <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -805,9 +801,9 @@ const TestingFacilities = () => {
                   Read More
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            {/* <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -830,9 +826,9 @@ const TestingFacilities = () => {
                   Read More
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            {/* <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -855,7 +851,7 @@ const TestingFacilities = () => {
                   Read More
                 </a>
               </div>
-            </div>
+            </div> */}
 
             <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">

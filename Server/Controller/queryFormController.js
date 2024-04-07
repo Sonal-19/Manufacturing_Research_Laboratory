@@ -49,7 +49,7 @@ const sendQueryForm = expressAsyncHandler(async (req, res) => {
 
   var mailOptions = {
     from: process.env.SMTP_MAIL,
-    to: email, // Change this to your email address or the recipient's email address
+    to: process.env.SMTP_MAIL, 
     subject: "Query Form Submission",
     text: message,
   };
